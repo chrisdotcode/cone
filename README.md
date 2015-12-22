@@ -22,7 +22,7 @@ Usage
 ```javascript
 'use strict';
 
-var configManager = require('config-manager');
+var configManager = require('cone');
 
 var myPlatformDir = configManager.getDirFor('myApp'); // Returns "$CONFIGDIR".
 
@@ -39,7 +39,7 @@ Creating a Configuration Directory
 ```javascript
 'use strict';
 
-var configManager = require('config-manager');
+var configManager = require('cone');
 // Creates a platform-specific configuration directory for 'myApp' in "$CONFIGDIR/myApp".
 configManager.create('myApp');
 ```
@@ -49,7 +49,7 @@ Saving Files to a Configuration Directory
 ```javascript
 'use strict';
 
-var configManager = require('config-manager');
+var configManager = require('cone');
 
 // If no file name is given, and your content is JSON, configManager automatically saves a file for you in 'config.json':
 configManager.save('myApp', {foo: 'bar', yes: true, no: [1, 2, 3]}); // Saves object contents to "$CONFIGDIR/myApp/config.json".
@@ -94,7 +94,7 @@ Loading Files
 ```javascript
 'use strict';
 
-var configManager = require('config-manager');
+var configManager = require('cone');
 
 // Gets file at "$CONFIGDIR/myApp/config.json", and parses it's contents as json:
 var configJSON = configManager.get('myApp');
@@ -138,7 +138,7 @@ Listing Files in a Configuration Directory
 ```javascript
 'use strict';
 
-var configManager = require('config-manager');
+var configManager = require('cone');
 
 configManager.list('myApp'); // Returns a list of file names in "$CONFIGDIR/myApp".
 ```
@@ -148,7 +148,7 @@ Delete Files in a Configuration Directory
 ```javascript
 'use strict';
 
-var configManager = require('config-manager');
+var configManager = require('cone');
 
 configManager.delete('myApp', 'foobar.BAK'); // Deletes "$CONFIGDIR/myApp/foobar.BAK".
 configManager.delete('myApp'); // Deletes the entire contents of "$CONFIGDIR/myApp", recursively.
@@ -158,11 +158,11 @@ configManager.delete('myApp'); // Deletes the entire contents of "$CONFIGDIR/myA
 
 Install
 =======
-    npm install config-manager
+    npm install cone
 
 API
 ===
-require('config-manager')
+require('cone')
 -------------------------
 Return the configManager object.
 
@@ -221,7 +221,7 @@ Example:
 ```javascript
 'use strict';
 
-var configManager = require('config-manager');
+var configManager = require('cone');
 configManager.create('myApp'); // Creates "$CONFIGDIR/myApp".
 ```
 

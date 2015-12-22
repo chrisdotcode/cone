@@ -1,7 +1,7 @@
 {
-  "name": "config-manager",
-  "version": "1.0.0",
-  "description": "configManager is a Node.js library that makes it easy to deal with config files and directories in a platform-agnostic way.",
+  "name": "cone",
+  "version": "1.0.1",
+  "description": "cone is a Node.js library that makes it easy to deal with config files and directories in a platform-agnostic way.",
   "main": "lib/index.js",
   "directories": {
     "test": "test"
@@ -12,7 +12,9 @@
     "mkdirp": "^0.5.1",
     "rimraf": "^2.4.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodeunit": "^0.9.1"
+  },
   "scripts": {
     "test": "node test/tests.js"
   },
